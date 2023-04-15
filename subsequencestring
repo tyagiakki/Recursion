@@ -1,0 +1,17 @@
+package rescursion;
+
+public class subsequenceofstring {
+	public static void reverse(String s,int idx,String r) {
+		if(idx==s.length()) {
+			System.out.println(r);
+			return;
+		}
+		reverse(s,idx+1,r+s.charAt(idx));
+		reverse(s,idx+1,r);	
+	}
+	public static void main(String[] args) {
+		String s="abc";
+		reverse(s,0,"");
+	}
+
+}
