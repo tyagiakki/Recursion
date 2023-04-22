@@ -1,0 +1,30 @@
+package rescursion;
+
+public class pascalRTriangle {
+	public static int triangle(int row) {
+		if(row==0)
+			return 1;
+		return row*triangle(row-1);
+	}
+	public static void main(String[] args) {
+		int n=5;
+		for(int row=0;row<=n;row++) {
+			for(int column=0;column<=n-row;column++) {
+				System.out.print("");}
+			
+				for(int column=0;column<=row;column++) {
+					System.out.print(triangle(row)/(triangle(row-column)*triangle(column)));
+				}
+				System.out.println();
+			}		
+		}
+	}
+
+
+//OUTPUT:-
+1
+11
+121
+1331
+14641
+15101051
